@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Embed Specific Section</title>
+</head>
+<body>
+  <div id="cardmaker-section"></div>
+
+  <script>
+    // Function to fetch and extract the desired section
+    async function embedSection() {
+      try {
+        // Fetch the HTML content of the target webpage
+        const response = await fetch('https://www.cardmaker.net/card-makers/yugioh');
+        const html = await response.text();
+
+        // Create a temporary DOM element to parse the HTML
+        const tempElement = document.createElement('div');
+        tempElement.innerHTML = html;
+
+        // Select the desired section using CSS selectors
+        const section = tempElement.querySelector('#root');
+
+        // Append the extracted section to your webpage
+        const container = document.getElementById('cardmaker-section');
+        container.appendChild(section);
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    }
+
+    // Call the function to embed the section
+    embedSection();
+  </script>
+</body>
+</html>

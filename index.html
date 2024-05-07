@@ -82,7 +82,7 @@
         <div class="card-collection-header">
           <h2>Discover the Ultimate Card Collection</h2>
           <p>Explore our amazing selection of cards and unleash your creativity!</p>
-          <a href="https://www.cardmaker.net/yugioh/" target="_blank" class="create-card-btn">Create Your Own Card</a>
+          <a href="#cardmaker" onclick="scrollToCardMaker()" class="create-card-btn">Create Your Own Card</a>
         </div>
         <div class="card-grid">
           <!-- Card 1 -->
@@ -179,6 +179,9 @@
       
         </div>
       </section>
+
+      <iframe id="cardmaker" src="https://ygopro.org/yugioh-card-maker/" width="100%" height="800px"></iframe>
+
     <footer>
         <div class="social-icons">
             <a href="#"><img src="img/icon/X-Logo.png" alt="Twitter"></a>
@@ -189,5 +192,11 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <script>
+      function scrollToCardMaker() {
+        const cardmaker = document.getElementById('cardmaker');
+        cardmaker.scrollIntoView({ behavior: 'smooth' });
+      }
+    </script>
 </body>
 </html>
