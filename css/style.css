@@ -551,3 +551,9 @@ nav img {
   .card-content {
       height: 500px;
   }
+
+
+  .create-card-btn {
+    font-size: 12px;
+
+  }
