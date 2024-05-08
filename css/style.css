@@ -557,3 +557,12 @@ nav img {
     font-size: 12px;
 
   }
+
+  .social-icons-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    list-style: none;
+    margin-top: 45px;
+}
